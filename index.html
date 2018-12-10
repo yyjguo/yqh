@@ -1,318 +1,402 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>年会邀请函</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'/>
-    <link rel="stylesheet" href="css/swiper.min.css">
-    <link rel="stylesheet" href="css/animate.min.css">
-    <script src="js/swiper.min.js"></script>
-    <script src="js/swiper.animate.min.js"></script>
-    <script src="js/jquery-1.8.3.min.js"></script>
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+     <title>年会邀请函</title>
+     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+     <link rel="stylesheet" href="css/swiper.min.css">
+     <link rel="stylesheet" href="css/animate.min.css">
+     <script src="js/swiper.min.js"></script>
+     <script src="js/swiper.animate.min.js"></script>
+     <script src="js/jquery-1.8.3.min.js"></script>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
+     <style>
+          * {
+               margin: 0;
+               padding: 0;
+          }
 
-        html, body {
-            height: 100%;
-        }
+          html,
+          body {
+               height: 100%;
+          }
 
-        body {
-            font-family: "microsoft yahei";
-        }
+          body {
+               font-family: "microsoft yahei";
+          }
 
-        .swiper-container {
-            /*  width: 320px;
+          .swiper-container {
+               /*  width: 320px;
               height: 480px;*/
-            width: 100%;
-            height: 100%;
-            background: #fff;
-        }
+               width: 100%;
+               height: 100%;
+               background: #fff;
+          }
 
-        .swiper-slide {
-            width: 100%;
-            height: 100%;
-            background: url(upload/bg.png) no-repeat left top;
-            background-size: 100% 100%;
-        }
+          .swiper-slide {
+               width: 100%;
+               height: 100%;
+               background: url(upload/bg.png) no-repeat left top;
+               background-size: 100% 100%;
+          }
 
-        img {
-            display: block;
-        }
+          img {
+               display: block;
+          }
 
-        .swiper-pagination-bullet {
-            width: 6px;
-            height: 6px;
-            background: #fff;
-            opacity: .4;
-        }
+          .swiper-pagination-bullet {
+               width: 6px;
+               height: 6px;
+               background: #fff;
+               opacity: .4;
+          }
 
-        .swiper-pagination-bullet-active {
-            opacity: 1;
-        }
+          .swiper-pagination-bullet-active {
+               opacity: 1;
+          }
 
-        @-webkit-keyframes tipmove {
-            0% {
-                bottom: 10px;
-                opacity: 0
-            }
-            50% {
-                bottom: 15px;
-                opacity: 1
-            }
-            100% {
-                bottom: 20px;
-                opacity: 0
-            }
-        }
+          @-webkit-keyframes tipmove {
+               0% {
+                    bottom: 10px;
+                    opacity: 0
+               }
 
-        .ani {
-            position: absolute;
-        }
+               50% {
+                    bottom: 15px;
+                    opacity: 1
+               }
 
-        .txt {
-            position: absolute;
-        }
+               100% {
+                    bottom: 20px;
+                    opacity: 0
+               }
+          }
 
-        #array {
-            position: absolute;
-            z-index: 999;
-            -webkit-animation: tipmove 1.5s infinite ease-in-out;
-        }
-        section {
-            overflow:hidden;
-        }
-    </style>
+          .ani {
+               position: absolute;
+          }
+
+          .txt {
+               position: absolute;
+          }
+
+          #array {
+               position: absolute;
+               z-index: 999;
+               -webkit-animation: tipmove 1.5s infinite ease-in-out;
+          }
+
+          section {
+               overflow: hidden;
+          }
+
+          .btn-music {
+               width: 2rem;
+               height: 2rem;
+               /* background-color: transparent; */
+               position: fixed;
+               top: 1.5rem;
+               right: 1.5rem;
+               z-index: 999;
+               /*  border: 0.125rem solid #fff; */
+               /* border-radius: 50%; */
+               padding: 0;
+               animation: btnMusicAni 3s infinite linear;
+          }
+
+          .btn-music img {
+               width: 2rem;
+               height: 2rem;
+               text-align: center;
+               line-height: 2rem;
+               color: #fff;
+               font-size: 1rem;
+               position: absolute;
+               top: -0.125rem;
+               left: -0.125rem;
+          }
+
+          .btn-music.paused {
+               opacity: 0.4;
+               animation: none;
+          }
+
+          @keyframes btnMusicAni {
+               0% {
+                    transform: rotate(0deg);
+               }
+
+               100% {
+                    transform: rotate(360deg);
+               }
+          }
+     </style>
 </head>
 
 <body>
-<div class="swiper-container">
-    <div class="swiper-wrapper">
-        <!-------------slide1----------------->
-        <section class="swiper-slide swiper-slide1">
-            <img src="upload/jianzhi.png" class="ani resize" style="width:280px;left:0;right:0;top:-43px;margin:0 auto;z-index:3;"
-                 swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="0s">
-            <img src="upload/jianzhi1.png" class="ani resize" style="width:320px;left:0;right:0;top:-35px;margin:0 auto;z-index:3;"
-                 swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0s">
-            <img src="upload/祥云.png" class="ani resize" style="width:320px;left:0;bottom:-25px;z-index:2;"
-                 swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0s">
-            <img src="upload/组1.png" class="ani resize" style="width:230px;height:402px;left:0px;right:0;margin:0 auto;top:26px;z-index:1;"
-                 swiper-animate-effect="fadeInDown" swiper-animate-duration="0.8s" swiper-animate-delay="0.5s">
-            <img src="upload/矩形1拷贝2.png" class="ani resize" style="width:230px;height:415px;left:0px;right:0;margin:0 auto;top:15px;z-index:1;"
-                 swiper-animate-effect="fadeInDown" swiper-animate-duration="0.8s" swiper-animate-delay="1s">
-            <img src="upload/矩形1拷贝3.png" class="ani resize" style="width:210px;height:397px;left:0px;right:0;margin:0 auto;top:24px;z-index:1;"
-                 swiper-animate-effect="fadeInDown" swiper-animate-duration="0.8s" swiper-animate-delay="1.3s">
-            <img src="upload/sinotrans_logo_cn.gif" class="ani resize" style="width:130px;left:0px;right:0;margin:0 auto;top:110px;z-index:1;"
-                 swiper-animate-effect="fadeInDown" swiper-animate-duration="1s" swiper-animate-delay="1.3s">
-            <img src="upload/文字.png" class="ani resize" style="width:130px;left:0px;right:0;margin:0 auto;top:145px;z-index:1;"
-                 swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="1.3s">
-            <img src="upload/线.png" class="ani resize" style="width:180px;left:0px;right:0;margin:0 auto;bottom:125px;z-index:1;"
-                 swiper-animate-effect="fadeInUpBig" swiper-animate-duration="1.5s" swiper-animate-delay="1.3s">
-            <span class="ani resize" style="display:block;width:180px;left:0px;right:0;margin:0 auto;bottom:75px;z-index:1;"
-                  swiper-animate-effect="fadeInUpBig" swiper-animate-duration="1.5s" swiper-animate-delay="1.5s">
-                <p class="txt resize" style="font-size:13px;width:122px;bottom:20px;left:0px;right:0;margin:0 auto;">——2019年座谈会——</p>
-                <p class="txt resize" style="font-size:13px;width:68px;bottom:0px;left:0px;right:0;margin:0 auto;">2019.01.01</p>
-            </span>
-        </section>
-        <!---------------slide2-------------->
-        <section class="swiper-slide swiper-slide2">
-            <img src="upload/jianzhi.png" class="ani resize" style="width:280px;left:0;right:0;top:-43px;margin:0 auto;z-index:3;"
-                 swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="0s">
-            <img src="upload/jianzhi1.png" class="ani resize" style="width:320px;left:0;right:0;top:-35px;margin:0 auto;z-index:3;"
-                 swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0s">
-            <img src="upload/祥云.png" class="ani resize" style="width:320px;left:0;bottom:-25px;z-index:2;"
-                 swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0s">
-            <img src="upload/组1.png" class="ani resize" style="width:230px;height:402px;left:0px;right:0;margin:0 auto;top:26px;z-index:1;"
-                 swiper-animate-effect="fadeInDown" swiper-animate-duration="0.8s" swiper-animate-delay="0.5s">
-            <img src="upload/矩形1拷贝2.png" class="ani resize" style="width:230px;height:415px;left:0px;right:0;margin:0 auto;top:15px;z-index:1;"
-                 swiper-animate-effect="fadeInDown" swiper-animate-duration="0.8s" swiper-animate-delay="1s">
-            <img src="upload/矩形1拷贝3.png" class="ani resize" style="width:210px;height:397px;left:0px;right:0;margin:0 auto;top:24px;z-index:1;"
-                 swiper-animate-effect="fadeInDown" swiper-animate-duration="0.8s" swiper-animate-delay="1.3s">
-            <div class="ani resize" style="width:180px;height:202px;left:71px;bottom:150px;z-index:1;"
-                  swiper-animate-effect="rotateInDownLeft" swiper-animate-duration="1s" swiper-animate-delay="1.5s">
-                <div class="txt">
-                    <p style="font-size:13px;letter-spacing:2px;line-height:40px;">亲爱的家人们：</p>
-                    <p style="font-size:13px;letter-spacing:2px;text-indent:30px;line-height:27px;width:180px;">每一个优秀企业和员工都离不开亲人们的支持，在此，公司谨代表全体员工感谢您的理解，现诚邀您及家人前来参加2019年年会。</p>
-                </div>
-            </div>
-            <img src="upload/云.png" class="ani resize" style="width:112px;height:32px;right:47px;top:103px;z-index:1;"
-                 swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="1.5s">
-            <img src="upload/云.png" class="ani resize" style="width:112px;height:32px;left:47px;bottom:77px;z-index:1;"
-                 swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="1.5s">
-            <img src="upload/贺年.png" class="ani resize" style="width:50px;height:95px;right:60px;bottom:60px;z-index:1;"
-                 swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="2s">
-        </section>
-        <!----------------slide3-------------->
-        <section class="swiper-slide swiper-slide3">
-            <img src="upload/jianzhi.png" class="ani resize" style="width:280px;left:0;right:0;top:-43px;margin:0 auto;z-index:3;"
-                 swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="0s">
-            <img src="upload/jianzhi1.png" class="ani resize" style="width:320px;left:0;right:0;top:-35px;margin:0 auto;z-index:3;"
-                 swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0s">
-            <img src="upload/祥云.png" class="ani resize" style="width:320px;left:0;bottom:-25px;z-index:2;"
-                 swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0s">
-            <img src="upload/组1.png" class="ani resize" style="width:230px;height:402px;left:0px;right:0;margin:0 auto;top:26px;z-index:1;"
-                 swiper-animate-effect="fadeInDown" swiper-animate-duration="0.8s" swiper-animate-delay="0.5s">
-            <img src="upload/矩形1拷贝2.png" class="ani resize" style="width:230px;height:415px;left:0px;right:0;margin:0 auto;top:15px;z-index:1;"
-                 swiper-animate-effect="fadeInDown" swiper-animate-duration="0.8s" swiper-animate-delay="1s">
-            <img src="upload/矩形1拷贝3.png" class="ani resize" style="width:210px;height:397px;left:0px;right:0;margin:0 auto;top:24px;z-index:1;"
-                 swiper-animate-effect="fadeInDown" swiper-animate-duration="0.8s" swiper-animate-delay="1.3s">
-            <span class="ani resize" style="display:block;width:72px;left:0px;right:0;margin:0 auto;top:93px;z-index:1;"
-                  swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="1.5s">
-                <p style="font-size:18px;font-weight:800;line-height:40px;left:0px;right:0;margin:0 auto;">时间安排</p>
-            </span>
-            <img src="upload/灯笼.png" class="ani resize" style="width:35px;height:60px;left:74px;;top:130px;z-index:1;"
-                 swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="1.5s" swiper-animate-delay="1.3s">
-            <img src="upload/灯笼.png" class="ani resize" style="width:35px;height:60px;left:74px;;top:200px;z-index:1;"
-                 swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="1.5s" swiper-animate-delay="1.6s">
-            <img src="upload/灯笼.png" class="ani resize" style="width:35px;height:60px;left:74px;;top:270px;z-index:1;"
-                 swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="1.5s" swiper-animate-delay="1.9s">
-            <img src="upload/灯笼.png" class="ani resize" style="width:35px;height:60px;left:74px;;top:340px;z-index:1;"
-                 swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="1.5s" swiper-animate-delay="2.2s">
-            <p class="ani resize" style="font-size:13px;width:100px;line-height:26px;right:93px;top:142px;z-index:1;"
-               swiper-animate-effect="fadeInRightBig" swiper-animate-duration="1.5s" swiper-animate-delay="1.3s">16:00嘉宾入场并领取吉祥物；</p>
-            <p class="ani resize" style="font-size:13px;width:100px;line-height:26px;right:93px;top:212px;z-index:1;"
-               swiper-animate-effect="fadeInRightBig" swiper-animate-duration="1.5s" swiper-animate-delay="1.6s">17:00年会表演准时开始；</p>
-            <p class="ani resize" style="font-size:13px;width:100px;line-height:26px;right:93px;top:282px;z-index:1;"
-               swiper-animate-effect="fadeInRightBig" swiper-animate-duration="1.5s" swiper-animate-delay="1.9s">19:00年会结束；</p>
-            <p class="ani resize" style="font-size:13px;width:100px;line-height:26px;right:93px;top:352px;z-index:1;"
-               swiper-animate-effect="fadeInRightBig" swiper-animate-duration="1.5s" swiper-animate-delay="2.2s">19:30尊耀汇年会晚宴</p>
-            <img src="upload/云.png" class="ani resize" style="width:112px;height:32px;left:47px;top:103px;z-index:1;"
-                 swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="2.2s">
-            <img src="upload/云.png" class="ani resize" style="width:112px;height:32px;right:47px;bottom:63px;z-index:1;"
-                 swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="2.2s">
-        </section>
-        <!-------------slide4----------------->
-        <section class="swiper-slide swiper-slide4">
-            <img src="upload/jianzhi.png" class="ani resize" style="width:280px;left:0;right:0;top:-43px;margin:0 auto;z-index:3;"
-                 swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="0s">
-            <img src="upload/jianzhi1.png" class="ani resize" style="width:320px;left:0;right:0;top:-35px;margin:0 auto;z-index:3;"
-                 swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0s">
-            <img src="upload/祥云.png" class="ani resize" style="width:320px;left:0;bottom:-25px;z-index:2;"
-                 swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0s">
-            <img src="upload/组1.png" class="ani resize" style="width:230px;height:402px;left:0px;right:0;margin:0 auto;top:26px;z-index:1;"
-                 swiper-animate-effect="fadeInDown" swiper-animate-duration="0.8s" swiper-animate-delay="0.5s">
-            <img src="upload/矩形1拷贝2.png" class="ani resize" style="width:230px;height:415px;left:0px;right:0;margin:0 auto;top:15px;z-index:1;"
-                 swiper-animate-effect="fadeInDown" swiper-animate-duration="0.8s" swiper-animate-delay="1s">
-            <img src="upload/矩形1拷贝3.png" class="ani resize" style="width:210px;height:397px;left:0px;right:0;margin:0 auto;top:24px;z-index:1;"
-                 swiper-animate-effect="fadeInDown" swiper-animate-duration="0.8s" swiper-animate-delay="1.3s">
-            <img src="upload/图层17.png" class="ani resize" style="width:35px;height:25px;left:90px;;top:110px;z-index:1;"
-                 swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="1.5s" swiper-animate-delay="1.3s">
-            <img src="upload/图层17.png" class="ani resize" style="width:35px;height:25px;left:90px;;top:210px;z-index:1;"
-                 swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="1.5s" swiper-animate-delay="1.6s">
-            <img src="upload/图层17.png" class="ani resize" style="width:35px;height:25px;left:90px;;top:310px;z-index:1;"
-                 swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="1.5s" swiper-animate-delay="1.9s">
-            <span class="ani resize" style="display:block;width:180px;left:90px;top:140px;z-index:1;"
-                  swiper-animate-effect="fadeInRightBig" swiper-animate-duration="1.5s" swiper-animate-delay="1.3s">
-                <p style="font-size:13px;letter-spacing:1px;line-height:26px;">年会场地：</p>
-                <p style="font-size:13px;letter-spacing:1px;">广州市海员路97号外运大楼</p>
-            </span>
-            <span class="ani resize" style="display:block;width:180px;left:90px;top:240px;z-index:1;"
-                  swiper-animate-effect="fadeInRightBig" swiper-animate-duration="1.5s" swiper-animate-delay="1.6s">
-                <p style="font-size:13px;letter-spacing:1px;line-height:26px;">年会时间：</p>
-                <p style="font-size:13px;letter-spacing:1px;">2019年01月01日</p>
-            </span>
-            <span class="ani resize" style="display:block;width:180px;left:90px;top:340px;z-index:1;"
-                  swiper-animate-effect="fadeInRightBig" swiper-animate-duration="1.5s" swiper-animate-delay="1.9s">
-                <p style="font-size:13px;letter-spacing:1px;line-height:26px;">行车路线：</p>
-                <p style="font-size:13px;letter-spacing:1px;">B5路等</p>
-            </span>
-            <img src="upload/云.png" class="ani resize" style="width:112px;height:32px;right:47px;top:103px;z-index:1;"
-                 swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="2.2s">
-            <img src="upload/云.png" class="ani resize" style="width:112px;height:32px;left:47px;bottom:63px;z-index:1;"
-                 swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="2.2s">
-            <img src="upload/贺年.png" class="ani resize" style="width:50px;height:95px;right:60px;bottom:60px;z-index:1;"
-                 swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="2s">
-        </section>
-        <!--slide5-->
-        <section class="swiper-slide swiper-slide5">
-            <img src="upload/jianzhi.png" class="ani resize" style="width:280px;left:0;right:0;top:-43px;margin:0 auto;z-index:3;"
-                 swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="0s">
-            <img src="upload/jianzhi1.png" class="ani resize" style="width:320px;left:0;right:0;top:-35px;margin:0 auto;z-index:3;"
-                 swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0s">
-            <img src="upload/祥云.png" class="ani resize" style="width:320px;left:0;bottom:-25px;z-index:2;"
-                 swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0s">
-            <img src="upload/组1.png" class="ani resize" style="width:230px;height:402px;left:0px;right:0;margin:0 auto;top:26px;z-index:1;"
-                 swiper-animate-effect="fadeInDown" swiper-animate-duration="0.8s" swiper-animate-delay="0.5s">
-            <img src="upload/矩形1拷贝2.png" class="ani resize" style="width:230px;height:415px;left:0px;right:0;margin:0 auto;top:15px;z-index:1;"
-                 swiper-animate-effect="fadeInDown" swiper-animate-duration="0.8s" swiper-animate-delay="1s">
-            <img src="upload/矩形1拷贝3.png" class="ani resize" style="width:210px;height:397px;left:0px;right:0;margin:0 auto;top:24px;z-index:1;"
-                 swiper-animate-effect="fadeInDown" swiper-animate-duration="0.8s" swiper-animate-delay="1.3s">
-            <p class="ani resize" style="font-size:18px;letter-spacing:1px;width:133px;line-height:36px;left:0;right:0;margin:0 auto;top:125px;z-index:1;"
-               swiper-animate-effect="bounceIn" swiper-animate-duration="1.5s" swiper-animate-delay="2.2s">最后恭祝您及家人阖家安康，财源广进！</p>
-            <img src="images/pic_wechat.jpg" class="ani resize" style="width:90px;height:90px;left:0;right:0;margin:0 auto;top:236px;z-index:1;"
-                 swiper-animate-effect="bounceInUp" swiper-animate-duration="1.5s" swiper-animate-delay="2.2s">
-            <img src="upload/云.png" class="ani resize" style="width:112px;height:32px;right:47px;top:103px;z-index:1;"
-                 swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="2.2s">
-            <img src="upload/云.png" class="ani resize" style="width:112px;height:32px;left:47px;bottom:63px;z-index:1;"
-                 swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="2.2s">
-            <img src="upload/贺年.png" class="ani resize" style="width:50px;height:95px;right:60px;bottom:60px;z-index:1;"
-                 swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="2s">
-        </section>
-    </div>
-    <img src="images/web-swipe-tip.png" style="width:20px;height:15px; top:460px; left:150px;" id="array" class="resize">
-    <div class="swiper-pagination"></div>
-</div>
-<script>
-    /*$扩展，同一元素执行完一个动画后执行另一个*/
-    $.fn.extend({
-        animateCss: function (animationName, callback) {
-            var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-            this.addClass('animated ' + animationName).on(animationEnd, function() {
-                $(this).removeClass('animated ' + animationName);
-                if (callback) {
-                    callback();
-                }
-            });
-            return this;
-        }
-    });
-    $('._word').animateCss('bounceIn', function () {
-        $('._word').addClass('animated wobble');
-    });
+     <div class="swiper-container">
+          <div class="swiper-wrapper">
+               <!-------------slide1----------------->
+               <section class="swiper-slide swiper-slide1">
+                    <img src="upload/jianzhi.png" class="ani resize" style="width:280px;left:0;right:0;top:-43px;margin:0 auto;z-index:3;"
+                         swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="0s">
+                    <img src="upload/jianzhi1.png" class="ani resize" style="width:320px;left:0;right:0;top:-35px;margin:0 auto;z-index:3;"
+                         swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0s">
+                    <img src="upload/祥云.png" class="ani resize" style="width:320px;left:0;bottom:-25px;z-index:2;"
+                         swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0s">
+                    <img src="upload/组1.png" class="ani resize" style="width:230px;height:402px;left:0px;right:0;margin:0 auto;top:26px;z-index:1;"
+                         swiper-animate-effect="fadeInDown" swiper-animate-duration="0.8s" swiper-animate-delay="0.5s">
+                    <img src="upload/矩形1拷贝2.png" class="ani resize" style="width:230px;height:415px;left:0px;right:0;margin:0 auto;top:15px;z-index:1;"
+                         swiper-animate-effect="fadeInDown" swiper-animate-duration="0.8s" swiper-animate-delay="1s">
+                    <img src="upload/矩形1拷贝3.png" class="ani resize" style="width:210px;height:397px;left:0px;right:0;margin:0 auto;top:24px;z-index:1;"
+                         swiper-animate-effect="fadeInDown" swiper-animate-duration="0.8s" swiper-animate-delay="1.3s">
+                    <img src="upload/sinotrans_logo_cn.gif" class="ani resize" style="width:228px;left:0px;right:0;margin:0 auto;top:88px;z-index:1;"
+                         swiper-animate-effect="fadeInDown" swiper-animate-duration="1s" swiper-animate-delay="1.3s">
+                    <img src="upload/文字.png" class="ani resize" style="width:130px;left:0px;right:0;margin:0 auto;top:145px;z-index:1;"
+                         swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="1.3s">
+                    <p class="ani resize" style="top:118px;right: 70px;" swiper-animate-effect="fadeInDown"
+                         swiper-animate-duration="1s" swiper-animate-delay="1.3s">-- 信息技术部</p>
+                    <img src="upload/线.png" class="ani resize" style="width:180px;left:0px;right:0;margin:0 auto;bottom:125px;z-index:1;"
+                         swiper-animate-effect="fadeInUpBig" swiper-animate-duration="1.5s" swiper-animate-delay="1.3s">
+                    <span class="ani resize" style="display:block;width:180px;left:0px;right:0;margin:0 auto;bottom:75px;z-index:1;"
+                         swiper-animate-effect="fadeInUpBig" swiper-animate-duration="1.5s" swiper-animate-delay="1.5s">
+                         <p class="txt resize" style="font-size:13px;width:122px;bottom:20px;left:0px;right:0;margin:0 auto;">—2019年座谈会—</p>
+                         <p class="txt resize" style="font-size:13px;width:68px;bottom:0px;left:0px;right:0;margin:0 auto;">2019.01.01</p>
+                    </span>
+               </section>
+               <!---------------slide2-------------->
+               <section class="swiper-slide swiper-slide2">
+                    <img src="upload/jianzhi.png" class="ani resize" style="width:280px;left:0;right:0;top:-43px;margin:0 auto;z-index:3;"
+                         swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="0s">
+                    <img src="upload/jianzhi1.png" class="ani resize" style="width:320px;left:0;right:0;top:-35px;margin:0 auto;z-index:3;"
+                         swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0s">
+                    <img src="upload/祥云.png" class="ani resize" style="width:320px;left:0;bottom:-25px;z-index:2;"
+                         swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0s">
+                    <img src="upload/组1.png" class="ani resize" style="width:230px;height:402px;left:0px;right:0;margin:0 auto;top:26px;z-index:1;"
+                         swiper-animate-effect="fadeInDown" swiper-animate-duration="0.8s" swiper-animate-delay="0.5s">
+                    <img src="upload/矩形1拷贝2.png" class="ani resize" style="width:230px;height:415px;left:0px;right:0;margin:0 auto;top:15px;z-index:1;"
+                         swiper-animate-effect="fadeInDown" swiper-animate-duration="0.8s" swiper-animate-delay="1s">
+                    <img src="upload/矩形1拷贝3.png" class="ani resize" style="width:210px;height:397px;left:0px;right:0;margin:0 auto;top:24px;z-index:1;"
+                         swiper-animate-effect="fadeInDown" swiper-animate-duration="0.8s" swiper-animate-delay="1.3s">
+                    <div class="ani resize" style="width:180px;height:202px;left:71px;bottom:150px;z-index:1;"
+                         swiper-animate-effect="rotateInDownLeft" swiper-animate-duration="1s" swiper-animate-delay="1.5s">
+                         <div class="txt">
+                              <p style="font-size:13px;letter-spacing:2px;line-height:40px;">亲爱的家人们：</p>
+                              <p style="font-size:13px;letter-spacing:2px;text-indent:30px;line-height:27px;width:180px;">每一个优秀企业和员工都离不开亲人们的支持，在此，公司谨代表全体员工感谢您的理解，现诚邀您及家人前来参加2019年年会。</p>
+                         </div>
+                    </div>
+                    <img src="upload/云.png" class="ani resize" style="width:112px;height:32px;right:47px;top:103px;z-index:1;"
+                         swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="1.5s">
+                    <img src="upload/云.png" class="ani resize" style="width:112px;height:32px;left:47px;bottom:77px;z-index:1;"
+                         swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="1.5s">
+                    <img src="upload/贺年.png" class="ani resize" style="width:50px;height:95px;right:60px;bottom:60px;z-index:1;"
+                         swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="2s">
+               </section>
+               <!----------------slide3-------------->
+               <section class="swiper-slide swiper-slide3">
+                    <img src="upload/jianzhi.png" class="ani resize" style="width:280px;left:0;right:0;top:-43px;margin:0 auto;z-index:3;"
+                         swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="0s">
+                    <img src="upload/jianzhi1.png" class="ani resize" style="width:320px;left:0;right:0;top:-35px;margin:0 auto;z-index:3;"
+                         swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0s">
+                    <img src="upload/祥云.png" class="ani resize" style="width:320px;left:0;bottom:-25px;z-index:2;"
+                         swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0s">
+                    <img src="upload/组1.png" class="ani resize" style="width:230px;height:402px;left:0px;right:0;margin:0 auto;top:26px;z-index:1;"
+                         swiper-animate-effect="fadeInDown" swiper-animate-duration="0.8s" swiper-animate-delay="0.5s">
+                    <img src="upload/矩形1拷贝2.png" class="ani resize" style="width:230px;height:415px;left:0px;right:0;margin:0 auto;top:15px;z-index:1;"
+                         swiper-animate-effect="fadeInDown" swiper-animate-duration="0.8s" swiper-animate-delay="1s">
+                    <img src="upload/矩形1拷贝3.png" class="ani resize" style="width:210px;height:397px;left:0px;right:0;margin:0 auto;top:24px;z-index:1;"
+                         swiper-animate-effect="fadeInDown" swiper-animate-duration="0.8s" swiper-animate-delay="1.3s">
+                    <span class="ani resize" style="display:block;width:72px;left:0px;right:0;margin:0 auto;top:93px;z-index:1;"
+                         swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="1.5s">
+                         <p style="font-size:18px;font-weight:800;line-height:40px;left:0px;right:0;margin:0 auto;">时间安排</p>
+                    </span>
+                    <img src="upload/灯笼.png" class="ani resize" style="width:35px;height:60px;left:74px;;top:130px;z-index:1;"
+                         swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="1.5s" swiper-animate-delay="1.3s">
+                    <img src="upload/灯笼.png" class="ani resize" style="width:35px;height:60px;left:74px;;top:200px;z-index:1;"
+                         swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="1.5s" swiper-animate-delay="1.6s">
+                    <img src="upload/灯笼.png" class="ani resize" style="width:35px;height:60px;left:74px;;top:270px;z-index:1;"
+                         swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="1.5s" swiper-animate-delay="1.9s">
+                    <img src="upload/灯笼.png" class="ani resize" style="width:35px;height:60px;left:74px;;top:340px;z-index:1;"
+                         swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="1.5s" swiper-animate-delay="2.2s">
+                    <p class="ani resize" style="font-size:13px;width:100px;line-height:26px;right:93px;top:142px;z-index:1;"
+                         swiper-animate-effect="fadeInRightBig" swiper-animate-duration="1.5s" swiper-animate-delay="1.3s">16:00嘉宾入场并领取吉祥物；</p>
+                    <p class="ani resize" style="font-size:13px;width:100px;line-height:26px;right:93px;top:212px;z-index:1;"
+                         swiper-animate-effect="fadeInRightBig" swiper-animate-duration="1.5s" swiper-animate-delay="1.6s">17:00年会表演准时开始；</p>
+                    <p class="ani resize" style="font-size:13px;width:100px;line-height:26px;right:93px;top:282px;z-index:1;"
+                         swiper-animate-effect="fadeInRightBig" swiper-animate-duration="1.5s" swiper-animate-delay="1.9s">19:00年会结束；</p>
+                    <p class="ani resize" style="font-size:13px;width:100px;line-height:26px;right:93px;top:352px;z-index:1;"
+                         swiper-animate-effect="fadeInRightBig" swiper-animate-duration="1.5s" swiper-animate-delay="2.2s">19:30尊耀汇年会晚宴</p>
+                    <img src="upload/云.png" class="ani resize" style="width:112px;height:32px;left:47px;top:103px;z-index:1;"
+                         swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="2.2s">
+                    <img src="upload/云.png" class="ani resize" style="width:112px;height:32px;right:47px;bottom:63px;z-index:1;"
+                         swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="2.2s">
+               </section>
+               <!-------------slide4----------------->
+               <section class="swiper-slide swiper-slide4">
+                    <img src="upload/jianzhi.png" class="ani resize" style="width:280px;left:0;right:0;top:-43px;margin:0 auto;z-index:3;"
+                         swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="0s">
+                    <img src="upload/jianzhi1.png" class="ani resize" style="width:320px;left:0;right:0;top:-35px;margin:0 auto;z-index:3;"
+                         swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0s">
+                    <img src="upload/祥云.png" class="ani resize" style="width:320px;left:0;bottom:-25px;z-index:2;"
+                         swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0s">
+                    <img src="upload/组1.png" class="ani resize" style="width:230px;height:402px;left:0px;right:0;margin:0 auto;top:26px;z-index:1;"
+                         swiper-animate-effect="fadeInDown" swiper-animate-duration="0.8s" swiper-animate-delay="0.5s">
+                    <img src="upload/矩形1拷贝2.png" class="ani resize" style="width:230px;height:415px;left:0px;right:0;margin:0 auto;top:15px;z-index:1;"
+                         swiper-animate-effect="fadeInDown" swiper-animate-duration="0.8s" swiper-animate-delay="1s">
+                    <img src="upload/矩形1拷贝3.png" class="ani resize" style="width:210px;height:397px;left:0px;right:0;margin:0 auto;top:24px;z-index:1;"
+                         swiper-animate-effect="fadeInDown" swiper-animate-duration="0.8s" swiper-animate-delay="1.3s">
+                    <img src="upload/图层17.png" class="ani resize" style="width:35px;height:25px;left:90px;;top:110px;z-index:1;"
+                         swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="1.5s" swiper-animate-delay="1.3s">
+                    <img src="upload/图层17.png" class="ani resize" style="width:35px;height:25px;left:90px;;top:210px;z-index:1;"
+                         swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="1.5s" swiper-animate-delay="1.6s">
+                    <img src="upload/图层17.png" class="ani resize" style="width:35px;height:25px;left:90px;;top:310px;z-index:1;"
+                         swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="1.5s" swiper-animate-delay="1.9s">
+                    <span class="ani resize" style="display:block;width:180px;left:90px;top:140px;z-index:1;"
+                         swiper-animate-effect="fadeInRightBig" swiper-animate-duration="1.5s" swiper-animate-delay="1.3s">
+                         <p style="font-size:13px;letter-spacing:1px;line-height:26px;">年会场地：</p>
+                         <p style="font-size:13px;letter-spacing:1px;">广州市海员路97号外运大楼</p>
+                    </span>
+                    <span class="ani resize" style="display:block;width:180px;left:90px;top:240px;z-index:1;"
+                         swiper-animate-effect="fadeInRightBig" swiper-animate-duration="1.5s" swiper-animate-delay="1.6s">
+                         <p style="font-size:13px;letter-spacing:1px;line-height:26px;">年会时间：</p>
+                         <p style="font-size:13px;letter-spacing:1px;">2019年01月01日</p>
+                    </span>
+                    <span class="ani resize" style="display:block;width:180px;left:90px;top:340px;z-index:1;"
+                         swiper-animate-effect="fadeInRightBig" swiper-animate-duration="1.5s" swiper-animate-delay="1.9s">
+                         <p style="font-size:13px;letter-spacing:1px;line-height:26px;">行车路线：</p>
+                         <p style="font-size:13px;letter-spacing:1px;">B5路等</p>
+                    </span>
+                    <img src="upload/云.png" class="ani resize" style="width:112px;height:32px;right:47px;top:103px;z-index:1;"
+                         swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="2.2s">
+                    <img src="upload/云.png" class="ani resize" style="width:112px;height:32px;left:47px;bottom:63px;z-index:1;"
+                         swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="2.2s">
+                    <img src="upload/贺年.png" class="ani resize" style="width:50px;height:95px;right:60px;bottom:60px;z-index:1;"
+                         swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="2s">
+               </section>
+               <!--slide5-->
+               <section class="swiper-slide swiper-slide5">
+                    <img src="upload/jianzhi.png" class="ani resize" style="width:280px;left:0;right:0;top:-43px;margin:0 auto;z-index:3;"
+                         swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="0s">
+                    <img src="upload/jianzhi1.png" class="ani resize" style="width:320px;left:0;right:0;top:-35px;margin:0 auto;z-index:3;"
+                         swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0s">
+                    <img src="upload/祥云.png" class="ani resize" style="width:320px;left:0;bottom:-25px;z-index:2;"
+                         swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0s">
+                    <img src="upload/组1.png" class="ani resize" style="width:230px;height:402px;left:0px;right:0;margin:0 auto;top:26px;z-index:1;"
+                         swiper-animate-effect="fadeInDown" swiper-animate-duration="0.8s" swiper-animate-delay="0.5s">
+                    <img src="upload/矩形1拷贝2.png" class="ani resize" style="width:230px;height:415px;left:0px;right:0;margin:0 auto;top:15px;z-index:1;"
+                         swiper-animate-effect="fadeInDown" swiper-animate-duration="0.8s" swiper-animate-delay="1s">
+                    <img src="upload/矩形1拷贝3.png" class="ani resize" style="width:210px;height:397px;left:0px;right:0;margin:0 auto;top:24px;z-index:1;"
+                         swiper-animate-effect="fadeInDown" swiper-animate-duration="0.8s" swiper-animate-delay="1.3s">
+                    <p class="ani resize" style="font-size:18px;letter-spacing:1px;width:133px;line-height:36px;left:0;right:0;margin:0 auto;top:125px;z-index:1;"
+                         swiper-animate-effect="bounceIn" swiper-animate-duration="1.5s" swiper-animate-delay="2.2s">最后恭祝您及家人阖家安康，财源广进！</p>
+                    <img src="images/pic_wechat.jpg" class="ani resize" style="width:90px;height:90px;left:0;right:0;margin:0 auto;top:236px;z-index:1;"
+                         swiper-animate-effect="bounceInUp" swiper-animate-duration="1.5s" swiper-animate-delay="2.2s">
+                    <img src="upload/云.png" class="ani resize" style="width:112px;height:32px;right:47px;top:103px;z-index:1;"
+                         swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="2.2s">
+                    <img src="upload/云.png" class="ani resize" style="width:112px;height:32px;left:47px;bottom:63px;z-index:1;"
+                         swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="2.2s">
+                    <img src="upload/贺年.png" class="ani resize" style="width:50px;height:95px;right:60px;bottom:60px;z-index:1;"
+                         swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="2s">
+               </section>
+          </div>
+          <img src="images/web-swipe-tip.png" style="width:20px;height:15px; top:460px; left:150px;" id="array" class="resize">
+          <img src="" alt="">
+          <div class="swiper-pagination"></div>
+          <button class="btn-music paused">
+               <img src="images/音乐.png" class="icon-note"></img>
+          </button>
+          
+     </div>
+     <audio loop="loop" autoplay="autoplay">
+          <source src="audio/Dreamer.mp3" type="audio/mpeg">
+      </audio>
+      <!-- <audio id="jp_audio_0" preload="metadata" src="http://www.cmhk.com/video/zsj.MP3" ></audio> -->
+     <script>
+          /*$扩展，同一元素执行完一个动画后执行另一个*/
+          $.fn.extend({
+               animateCss: function (animationName, callback) {
+                    var animationEnd =
+                         'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+                    this.addClass('animated ' + animationName).on(animationEnd, function () {
+                         $(this).removeClass('animated ' + animationName);
+                         if (callback) {
+                              callback();
+                         }
+                    });
+                    return this;
+               }
+          });
+          $('._word').animateCss('bounceIn', function () {
+               $('._word').addClass('animated wobble');
+          });
 
-    scaleW = window.innerWidth / 320;
-    scaleH = window.innerHeight / 480;
-    var resizes = document.querySelectorAll('.resize');
-    for (var j = 0; j < resizes.length; j++) {
-        resizes[j].style.width = parseInt(resizes[j].style.width) * scaleW + 'px';
-        resizes[j].style.height = parseInt(resizes[j].style.height) * scaleH + 'px';
-        resizes[j].style.top = parseInt(resizes[j].style.top) * scaleH + 'px';
-        resizes[j].style.bottom = parseInt(resizes[j].style.bottom) * scaleH + 'px';
-        resizes[j].style.left = parseInt(resizes[j].style.left) * scaleW + 'px';
-        resizes[j].style.right = parseInt(resizes[j].style.right) * scaleW + 'px';
-        /*resizes[j].style.letterSpacing = parseInt(resizes[j].style.letterSpacing) * scaleW + 'px';
-        resizes[j].style.textIndent = parseInt(resizes[j].style.textIndent) * scaleW + 'px';
-        resizes[j].style.lineHeight = parseInt(resizes[j].style.lineHeight) * scaleH + 'px';*/
-    }
-    var scales = document.querySelectorAll('.txt');
-    for (var i = 0; i < scales.length; i++) {
-        ss = scales[i].style;
-        ss.webkitTransform =
-            ss.MsTransform =
-            ss.msTransform =
-            ss.MozTransform =
-            ss.OTransform =
-            ss.transform =
-            'translateX(' + scales[i].offsetWidth * (scaleW - 1) / 2 + 'px) ' +
-            'translateY(' + scales[i].offsetHeight * (scaleH - 1) / 2 + 'px)' +
-            'scaleX(' + scaleW + ') ' +
-            'scaleY(' + scaleH + ') ';
-    }
-    var mySwiper = new Swiper('.swiper-container', {
-        direction: 'vertical',
-        pagination: '.swiper-pagination',
-        mousewheelControl: true,
-        onInit: function (swiper) {
-            swiperAnimateCache(swiper);
-            swiperAnimate(swiper);
-        },
-        onSlideChangeEnd: function (swiper) {
-            swiperAnimate(swiper);
-        }
-    })
-</script>
+          scaleW = window.innerWidth / 320;
+          scaleH = window.innerHeight / 480;
+          var resizes = document.querySelectorAll('.resize');
+          for (var j = 0; j < resizes.length; j++) {
+               resizes[j].style.width = parseInt(resizes[j].style.width) * scaleW + 'px';
+               resizes[j].style.height = parseInt(resizes[j].style.height) * scaleH + 'px';
+               resizes[j].style.top = parseInt(resizes[j].style.top) * scaleH + 'px';
+               resizes[j].style.bottom = parseInt(resizes[j].style.bottom) * scaleH + 'px';
+               resizes[j].style.left = parseInt(resizes[j].style.left) * scaleW + 'px';
+               resizes[j].style.right = parseInt(resizes[j].style.right) * scaleW + 'px';
+               /*resizes[j].style.letterSpacing = parseInt(resizes[j].style.letterSpacing) * scaleW + 'px';
+               resizes[j].style.textIndent = parseInt(resizes[j].style.textIndent) * scaleW + 'px';
+               resizes[j].style.lineHeight = parseInt(resizes[j].style.lineHeight) * scaleH + 'px';*/
+          }
+          var scales = document.querySelectorAll('.txt');
+          for (var i = 0; i < scales.length; i++) {
+               ss = scales[i].style;
+               ss.webkitTransform =
+                    ss.MsTransform =
+                    ss.msTransform =
+                    ss.MozTransform =
+                    ss.OTransform =
+                    ss.transform =
+                    'translateX(' + scales[i].offsetWidth * (scaleW - 1) / 2 + 'px) ' +
+                    'translateY(' + scales[i].offsetHeight * (scaleH - 1) / 2 + 'px)' +
+                    'scaleX(' + scaleW + ') ' +
+                    'scaleY(' + scaleH + ') ';
+          }
+          var mySwiper = new Swiper('.swiper-container', {
+               direction: 'vertical',
+               pagination: '.swiper-pagination',
+               mousewheelControl: true,
+               onInit: function (swiper) {
+                    swiperAnimateCache(swiper);
+                    swiperAnimate(swiper);
+               },
+               onSlideChangeEnd: function (swiper) {
+                    swiperAnimate(swiper);
+               }
+          })
+          $(document).ready(function () {
+               
+               var bgMusic = $('audio').get(0);
+               var $btnMusic = $('.btn-music');
+               var playAuto = function(){
+                    if (bgMusic.paused) {
+                         bgMusic.play();
+                         $(this).removeClass('paused');
+                    } 
+               }
+               $(document).one('touchstart',playAuto)
+               //$(document).one('click',playAuto)
+
+               // background music control
+               $btnMusic.click(function () {
+                    if (bgMusic.paused) {
+                         bgMusic.play();
+                         $(this).removeClass('paused');
+                    } else {
+                         bgMusic.pause();
+                         $(this).addClass('paused');
+                    }
+               });
+
+          });
+     </script>
 </body>
+
 </html>
